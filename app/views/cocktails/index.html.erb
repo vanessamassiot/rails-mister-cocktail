@@ -1,6 +1,21 @@
-<h1> All Cocktails </h1>
-<ul>
-  <% @cocktails.each do |cocktail| %>
-  <li><%= link_to "#{cocktail.name}", cocktail_path %></li>
-  <% end %>
-</ul>
+
+
+
+<div class= "container">
+  <div class= "row">
+    <div class= "col-xs-12">
+      <h1>Choose your Cocktail</h1>
+    </div>
+  </div>
+  <div>
+    <div class= "col-xs-12">
+    	<% @cocktails.each do |cocktail| %>
+          <div class= "col-xs-4">
+          <%= cocktail.id%> - <%= link_to cocktail.name, cocktail_path(cocktail) %>
+          <%= image_tag cocktail.picture.url(:thumb) if cocktail.picture_url %>
+          </div>
+         <% end %>
+    </div>
+  </div>
+</div>
+

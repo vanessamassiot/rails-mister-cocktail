@@ -1,1 +1,8 @@
-new.html.erb
+<h2> Add a new fancy Cocktail</h2>
+
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <%= f.association :doses %>
+  <%= f.association :ingredients%>
+  <%= f.button :submit, 'Add this new cocktail' %>
+<% end %>
