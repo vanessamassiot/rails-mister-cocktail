@@ -3,6 +3,7 @@
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
   <%= f.association :doses %>
+  <%= f.input :ingredients, collection:Ingredient.all %>
   <%= f.association :ingredients%>
   <%= f.button :submit, 'Add this new cocktail' %>
 <% end %>
