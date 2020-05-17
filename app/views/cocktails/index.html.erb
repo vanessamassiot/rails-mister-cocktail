@@ -1,21 +1,21 @@
-
-
+<div class="banner">
+  <div>
+    <h1> Cocktails</h1>
+    <p> Discover our wonderful cocktails</p>
+  </div>
+</div>
 
 <div class= "container">
-  <div class= "row">
-    <div class= "col-xs-12">
-      <h1>Choose your Cocktail</h1>
-    </div>
-  </div>
-  <div>
-    <div class= "col-xs-12">
+    <div class= "row col-xs-12">
     	<% @cocktails.each do |cocktail| %>
-          <div class= "col-xs-4">
-          <%= cocktail.id%> - <%= link_to cocktail.name, cocktail_path(cocktail) %>
-          <%= image_tag cocktail.picture.url(:thumb) if cocktail.picture_url %>
+          <div class= "card col-xs-12 col-md-4">
+            <div class="card-description">
+              <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+            </div>
+          
+          <%= image_tag cocktail.picture_url(:thumb) if cocktail.picture_url %>
           </div>
          <% end %>
     </div>
-  </div>
 </div>
 

@@ -31,3 +31,10 @@ ing12= { name: "grenadine sirup"}
 	ingredient = Ingredient.create(attributes)
 	puts "created #{ingredient.name}"
 end
+
+
+
+
+
+
+

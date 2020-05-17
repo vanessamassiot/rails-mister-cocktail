@@ -1,1 +1,9 @@
-new.html.erb
+
+<h2>Add a new dose for <%= @cocktail.name %></h2>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.input :ingredient_id, collection:Ingredient.all, nput_html: { multiple: true, class: 'multiple-select' }, include_hidden: false%>
+  <%= f.button :submit, 'Add this to my new cocktail' %>
+<% end %>
+
