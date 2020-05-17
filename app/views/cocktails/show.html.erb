@@ -1,11 +1,9 @@
 
 <div class="container">
 	<div class="row">
-		<div class="card">
-			<h2> some beautiful image</h2>
-			
+		<div class="col-xs-12 col-md-4 card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill%>')" >
 		</div>
-		<div class="card card-description">
+		<div class="col-xs-12 col-md-4 card">
 			<h1><%= @cocktail.name %></h1>
 			<p> 
 				<% @cocktail.doses.each do |dose| %>
