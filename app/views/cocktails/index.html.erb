@@ -14,15 +14,24 @@
               <div class="card-description">
                 <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
               </div>
-              <p><%= link_to 'Edit', edit_cocktail_path(cocktail) %></p>
+              <p>
+                <%= link_to 'Edit', edit_cocktail_path(cocktail) %>
+              </p>
+              <div class="card-user">
+                <%= link_to cocktail, method: "delete", data: { confirm: 'Are you sure?' } do %>
+                   <i class="fas fa-trash-alt"></i>
+                <% end %>
+              </div>
               </div>
             <%else %>
               <div class="card col-xs-12 col-md-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), height: 300, width: 400, crop: :fill%>')" >
                 <div class="card-description">
                   <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
                 </div>
-                <p><%= link_to 'Edit', edit_cocktail_path(cocktail)%></p>
-                <p><%= link_to 'Destroy', cocktail, method: "delete", data: { confirm: 'Are you sure?' }%></p>
+                <div class="card-btn">
+                  <%= link_to 'Edit', edit_cocktail_path(cocktail)%>
+                  <%= link_to 'Destroy', cocktail, method: "delete", data: { confirm: 'Are you sure?' }%>
+                </div>
               </div>
             <%end %>
       <% end %>

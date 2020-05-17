@@ -17,11 +17,27 @@
   }
 
 }
+
+.card-show {
+  padding-top: 20px;
+  background-color: $light-pink;
+  color:$gray;
+  a {
+    color:$gray;
+  }
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
 .card-user {
   position: absolute;
   right: 10px;
-  top: 10px;
-  width: 40px;
+  bottom: 10px;
+  width: 20px;
   border-radius: 50%;
 }
 .card-category {
