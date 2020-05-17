@@ -1,12 +1,25 @@
 
-<h2> Add a new fancy Cocktail</h2>
+<div class="container">
+	<div class="row">
+		<h2>Add a new fancy Cocktail</h2>
+	</div>
+
+	<div class="row">
+		<%= simple_form_for @cocktail do |f| %>
+		  <%= f.input :name %>
+		  <%= f.input :photo, as: :file, direct_upload: true %>
+		  <!-- <%= f.association :doses %> -->
+		  <!-- <%= f.input :ingredients, collection:Ingredient.all %> -->
+		  <!-- <%= f.association :ingredients%> -->
+		  <%= f.button :submit, 'Add this new cocktail' %>
+		<% end %>
+	</div>
+</div>
 
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file, direct_upload: true %>
-  <!-- <%= f.association :doses %> -->
-  <!-- <%= f.input :ingredients, collection:Ingredient.all %> -->
-  <!-- <%= f.association :ingredients%> -->
-  <%= f.button :submit, 'Add this new cocktail' %>
-<% end %>
+
+
+
+
+
+
