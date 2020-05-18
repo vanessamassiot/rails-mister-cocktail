@@ -9,7 +9,7 @@
 				<% @cocktail.doses.each do |dose| %>
 				<li><%= dose.description %>
 				<%= dose.ingredient.name %>
-				<%= link_to dose, method: "delete", data: { confirm: 'Are you sure?' } do %>
+				<%= link_to "/cocktail", method: "delete", data: { confirm: 'Are you sure?' } do %>
                    <i class="fas fa-trash-alt"></i>
                 <% end %>
 				</li>
